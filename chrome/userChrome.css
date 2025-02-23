@@ -1,0 +1,209 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--icon-brightness: 0 !important;
+		/* Adjust for light mode */
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--icon-brightness: 1 !important;
+		/* Adjust for dark mode */
+	}
+}
+
+:root {
+	/*--sidebar-hover-width: 28px;*/
+	--sidebar-visible-width: 600px;
+}
+
+:root {
+	--panel-item-hover-bgcolor: #434c5e !important;
+}
+
+/*#zen-essentials-container {*/
+/*    grid-template-columns: repeat(2, 2fr) !important;*/
+/*}*/
+
+#navigator-toolbox {
+	& #zen-workspaces-button {
+		gap: 1.0ch !important;
+	}
+}
+
+#zen-workspaces-button {
+	&:not([as-button="true"]) {
+		& toolbarbutton {
+			@media not (-moz-bool-pref: "zen.workspaces.hide-deactivated-workspaces") {
+				& {
+					filter: none !important;
+				}
+			}
+		}
+	}
+}
+
+#identity-icon-box,
+#identity-permission-box,
+#star-button-box,
+#tracking-protection-icon-container {
+	display: none !important;
+}
+
+toolbarbutton[zen-workspace-id="2dbe52a2-2b20-457e-8943-99f992e5af2c"] .zen-workspace-icon {
+	font-size: 0 !important;
+	/* Hide existing emoji */
+	position: relative !important;
+}
+
+toolbarbutton[zen-workspace-id="7c7ce1ad-cb6a-4760-b894-338b1db5de89"] .zen-workspace-icon {
+	font-size: 0 !important;
+	/* Hide existing emoji */
+	position: relative !important;
+}
+
+toolbarbutton[zen-workspace-id="aa38d600-0e4c-4100-b96a-7bd69c430664"] .zen-workspace-icon {
+	font-size: 0 !important;
+	/* Hide existing emoji */
+	position: relative !important;
+}
+
+toolbarbutton[zen-workspace-id="2dbe52a2-2b20-457e-8943-99f992e5af2c"] .zen-workspace-icon {
+	image: url("/Users/matthewkennedy/Library/Application\ Support/zen/Profiles/28tji0fs.Default\ (alpha)/chrome/user.svg") !important;
+	background-image: url("/Users/matthewkennedy/Library/Application\ Support/zen/Profiles/28tji0fs.Default\ (alpha)/chrome/user.svg") !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	width: 20px !important;
+	height: 20px !important;
+	display: inline-block !important;
+}
+
+toolbarbutton[zen-workspace-id="7c7ce1ad-cb6a-4760-b894-338b1db5de89"] .zen-workspace-icon {
+	image: url("/Users/matthewkennedy/Library/Application\ Support/zen/Profiles/28tji0fs.Default\ (alpha)/chrome/book.svg") !important;
+	background-image: url("/Users/matthewkennedy/Library/Application\ Support/zen/Profiles/28tji0fs.Default\ (alpha)/chrome/book.svg") !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	width: 20px !important;
+	height: 20px !important;
+	display: inline-block !important;
+}
+
+toolbarbutton[zen-workspace-id="aa38d600-0e4c-4100-b96a-7bd69c430664"] .zen-workspace-icon {
+	image: url("/Users/matthewkennedy/Library/Application Support/zen/Profiles/28tji0fs.Default (alpha)/chrome/code copy.svg") !important;
+	background-image: url("/Users/matthewkennedy/Library/Application Support/zen/Profiles/28tji0fs.Default (alpha)/chrome/code copy.svg") !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	width: 20px !important;
+	height: 20px !important;
+	display: inline-block !important;
+}
+
+/*.titlebar-buttonbox-container {*/
+/*    display: none;*/
+/*}*/
+
+#nav-bar-overflow-button {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+#urlbar-input {
+	font-size: 13px !important;
+	line-height: 14px !important;
+}
+
+.urlbar-input {
+	text-align: center !important;
+}
+
+.urlbar-input {
+	display: inline-block;
+}
+
+.urlbar-input div {
+	display: inline-block;
+	width: auto;
+	white-space: nowrap;
+	padding: 5px;
+}
+
+#titlebar-buttonbox {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+#zen-sidebar-top-buttons {
+	height: 32px !important;
+	min-height: 32px !important;
+}
+
+#nav-bar {
+	height: 32px !important;
+	min-height: 32px !important;
+	padding: 0 !important;
+}
+
+#urlbar-background {
+	margin: 4px;
+	border-radius: 8px !important;
+}
+
+#vertical-pinned-tabs-container {
+	padding-top: 0px !important;
+	margin-top: 0px !important;
+}
+
+#tabbrowser-tabbox {
+	padding-top: 0px !important;
+}
+
+#urlbar-zoom-button {
+	display: None !important;
+}
+
+/*#PanelUI-menu-button {*/
+/*    display: none !important;*/
+/*}*/
+
+#zen-workspaces-button {
+	container-name: workspaces;
+	container-type: inline-size;
+	display: block;
+	width: 100%;
+	max-height: min-content;
+	background: transparent !important;
+}
+
+@container workspaces (width < 100px) {
+	.subviewbutton[tooltiptext]:not([active="true"]):not(:hover) {
+		width: 10px !important;
+		padding: 0px;
+	}
+
+	.subviewbutton[tooltiptext]:not([active="true"]):not(:hover)
+	/*.zen-workspace-icon {*/
+	/*    /*visibility: hidden;*/
+	*/
+	/*    position: relative;*/
+	/*    padding: 0;*/
+	/*    width: 5px !important;*/
+	/*    height: 5px !important;*/
+	/*    padding: 0px;*/
+	/*}*/
+
+	.subviewbutton[tooltiptext]:not([active="true"]) .zen-workspace-icon::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		visibility: visible !important;
+		z-index: 1;
+		padding: 0;
+	}
+}
